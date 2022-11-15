@@ -1,2 +1,233 @@
-/* RESET */
-* {box-sizing: border-box; margin: 0; padding: 0;}
+body {
+  background-color: #FFF8E7;
+  overflow-x: hidden;
+}
+
+.project__cards {
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2.8125rem;
+  margin-bottom: 2.8125rem;
+}
+
+.project__card {
+  position: relative;
+  width: 19%;
+  padding: 1.25rem;
+  margin: .3125rem;
+  background-color: white;
+  border-radius: .9375rem;
+  cursor: pointer;
+}
+
+.project__card-picture > img {
+  width: 100%;
+  height: 16.25rem;
+  object-fit: cover;
+  border-radius: .9375rem;
+  margin-bottom: .625rem;
+}
+
+.project__card ul {
+  position: relative;
+  left: 0;
+  padding: 0;
+  margin-top: .3125rem;
+}
+
+.project__card ul li {
+  display: inline;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  margin: .3125rem;
+  border-radius: .1875rem;
+  padding: .3125rem;
+}
+
+.project__details {
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding: 1.25rem;
+  background-color: white;
+  border-radius: .9375rem;
+  margin-bottom: 2.8125rem;
+}
+
+.project__details-picturebl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.project__details-picture {
+  display: inline;
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+.project__details-picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header {
+  position: relative;
+}
+
+.navigation {
+  position: relative;
+  background-color: #990821;
+  height: 3.125rem;
+}
+
+.nav-menu {
+  position: absolute;
+  right: .625rem;
+  top: .625rem;
+}
+
+.nav-menu li{
+  display: inline;
+  padding: .625rem;
+}
+
+.nav-menu li a {
+  color: white;  
+  text-decoration: none;
+}
+
+.project__events {
+  background-color: #EB1332;
+}
+
+.project__events-list {
+  position: relative;
+  top: .9375rem;
+  height: 4.375rem;
+  width: 187.5rem;
+  left: 100%;
+  animation: rightToLeft 20s linear infinite;
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: none;
+    left: 100%;
+  }
+  100% {
+    transform: translateX(-100%);
+    left: 0;
+  }
+}
+
+.project__events-list li {
+  display: inline;
+  padding: .625rem;
+}
+
+.project__events-list li a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.project__optel-clock,
+.project__aftel-clock {
+  background-color: #141414;
+  padding: 1.25rem;
+}
+
+.project__optel-clock .optel__clock,
+.project__aftel-clock .aftel__clock {
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+
+.project__optel-clock p,
+.project__aftel-clock p {
+  text-align: center;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+
+.project__footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 9.375rem;
+  position: relative;
+}
+
+.project__footer ul{
+  margin: 0 auto;
+  padding-top: .9375rem;
+}
+
+.project__footer ul li{
+  display: inline;
+  list-style: none;
+  padding: .9375rem;
+  font-size: 1.4rem;
+}
+
+.project__footer ul li a svg {
+  display: inline;
+  fill: white;
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+
+.project__footer p{
+  position: absolute;
+  bottom: .625rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
