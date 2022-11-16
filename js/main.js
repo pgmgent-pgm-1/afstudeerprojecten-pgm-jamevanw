@@ -40,7 +40,6 @@
         this.generateHTMLForAftelClock();
         this.generateHTMLForOptelClock();
       }, 1000);
-      
     },
     generateHTMLForNavigation (navigation) {
       return `
@@ -167,9 +166,7 @@
     },
     generateHTMLForProjectDetails (card) {
       return `
-      
       <div id="myModal" class="modal">
-
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -177,17 +174,18 @@
             <div class="project__details-picturebl">
             ${this.generateHTMLForProjectDetailsPicture(card.screenshots)}
             </div>
-            <div class="project__details_text">
+            <div class="project__details-text">
               <p>${card.author.firstName} ${card.author.lastName}</p>
-              <p>${card.title}</p>
+              <p class="project__details-title">${card.title}</p>
               <div class="project__details-technologies">
-                ${this.generateHTMLForPRojectDetailsTechnologies(card.technologies)}
+                <ul>
+                  ${this.generateHTMLForPRojectDetailsTechnologies(card.technologies)}
+                </ul>
               </div>
               <p>${card.synopsis}</p>
             </div>
           </div>
         </div>
-
       </div>
       `;
     },
@@ -207,7 +205,7 @@
       let tmpStr = '';
       for (let i = 0; i < card.length; i++) {
         tmpStr += `
-        <p>${card[i].name}</p>
+        <li>${card[i].name}</li>
         `;
       }
       return tmpStr;
